@@ -1,1 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte | Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
 
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-leaf"></i>
+                <div>
+                    <h1>Agro Forte</h1>
+                    <p>Futuro Sustentável</p>
+                </div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#inicio">Início</a>
+                <a href="#producao">Produção</a>
+                <a href="#sustentabilidade">Sustentabilidade</a>
+                <a href="#desafios">Desafios</a>
+                <a href="#solucoes">Soluções</a>
+                <a href="#contato">Contato</a>
+            </div>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="mobile-menu hidden">
+        <a href="#inicio" onclick="toggleMobileMenu()">Início</a>
+        <a href="#producao" onclick="toggleMobileMenu()">Produção</a>
+        <a href="#sustentabilidade" onclick="toggleMobileMenu()">Sustentabilidade</a>
+        <a href="#desafios" onclick="toggleMobileMenu()">Desafios</a>
+        <a href="#solucoes" onclick="toggleMobileMenu()">Soluções</a>
+        <a href="#contato" onclick="toggleMobileMenu()">Contato</a>
+    </div>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Agro Forte</h2>
+            <p class="subtitle">Futuro Sustentável</p>
+            <p class="description">Harmonia entre produção e preservação do meio ambiente</p>
+            <a href="#producao" class="cta-button">Conhecer o Projeto</a>
+        </div>
+    </section>
+
+    <!-- PRODUÇÃO -->
+    <section id="producao" class="section">
+        <div class="container">
+            <h2 class="section-title">Produção Agrícola</h2>
+            <p class="section-subtitle">O motor da economia brasileira</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>22%</h3>
+                    <p>do PIB Nacional</p>
+                </div>
+                <div class="stat-card">
+                    <h3>19M</h3>
+                    <p>Empregos Gerados</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Líder Mundial</h3>
+                    <p>Exportador de soja, café e carne</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUSTENTABILIDADE -->
+    <section id="sustentabilidade" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Práticas Sustentáveis</h2>
+            
+            <div class="cards-grid">
+                <div class="feature-card">
+                    <img src="https://source.unsplash.com/random/600x400/?drone" alt="Agricultura de Precisão">
+                    <h4>Agricultura de Precisão</h4>
+                    <p>Drones, sensores e IA para maior eficiência.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://source.unsplash.com/random/600x400/?solar" alt="Energia Solar">
+                    <h4>Energia Renovável</h4>
+                    <p>Placas solares e biodigestores nas fazendas.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://source.unsplash.com/random/600x400/?irrigation" alt="Irrigação Inteligente">
+                    <h4>Irrigação Inteligente</h4>
+                    <p>Economia de até 40% de água.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://source.unsplash.com/random/600x400/?soil" alt="Solo Saudável">
+                    <h4>Agricultura Regenerativa</h4>
+                    <p>Recuperação e preservação do solo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESAFIOS -->
+    <section id="desafios" class="section">
+        <div class="container">
+            <h2 class="section-title red">Desafios Ambientais</h2>
+            <div class="challenges-grid">
+                <div class="challenge-item">🌳 Desmatamento</div>
+                <div class="challenge-item">💧 Escassez de Água</div>
+                <div class="challenge-item">🏭 Emissões de Carbono</div>
+                <div class="challenge-item">🧪 Agrotóxicos em excesso</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUÇÕES -->
+    <section id="solucoes" class="section solutions-section">
+        <div class="container">
+            <h2 class="section-title white">Soluções e Inovação</h2>
+            
+            <div class="interactive-grid">
+                <!-- Calculadora -->
+                <div class="interactive-card">
+                    <h3>Calculadora de Impacto</h3>
+                    <input type="number" id="area" value="100" placeholder="Hectares">
+                    <button onclick="calcularImpacto()">Calcular</button>
+                    <div id="resultado"></div>
+                </div>
+
+                <!-- Quiz -->
+                <div class="interactive-card">
+                    <h3>Quiz da Sustentabilidade</h3>
+                    <p id="pergunta">Qual é a principal vantagem da agricultura de precisão?</p>
+                    <div id="opcoes"></div>
+                    <div id="quiz-result"></div>
+                </div>
+
+                <!-- Galeria -->
+                <div class="interactive-card gallery-card">
+                    <h3>Galeria</h3>
+                    <div class="gallery">
+                        <img src="https://source.unsplash.com/random/300x300/?farm-drone" alt="">
+                        <img src="https://source.unsplash.com/random/300x300/?solar-farm" alt="">
+                        <img src="https://source.unsplash.com/random/300x300/?regenerative" alt="">
+                        <img src="https://source.unsplash.com/random/300x300/?healthy-soil" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <form onsubmit="enviarMensagem(event)" class="contact-form">
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu e-mail" required>
+                <textarea placeholder="Sua mensagem" rows="6" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p class="logo-footer">Agro Forte • Futuro Sustentável</p>
+            <p>Projeto Educacional - Agricultura Sustentável</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
